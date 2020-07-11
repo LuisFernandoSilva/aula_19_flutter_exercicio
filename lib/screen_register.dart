@@ -20,7 +20,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _neighborhoodController = TextEditingController();
   final _cityController = TextEditingController();
   final _stateController = TextEditingController();
-  final _countryController = TextEditingController();
+  String _country = 'Brasil';
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   final _formKey = GlobalKey<FormState>();
   final UserData user = UserData();
@@ -37,7 +37,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
       _neighborhoodController.clear();
       _cityController.clear();
       _stateController.clear();
-      _countryController.clear();
     });
   }
 
@@ -318,12 +317,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           Expanded(
                             flex: 75,
                             child: TextFormField(
-                              controller: _countryController,
+                              enabled: false,
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   hintText: 'País',
                                   hintStyle: TextStyle(color: Colors.blue),
-                                  labelText: 'Brasil'),
+                                  labelText: _country),
                             ),
                           ),
                         ],
@@ -343,6 +342,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     },
                     child: Text('Limpar'),
                     borderSide: BorderSide(color: Colors.black),
+                    focusColor: Colors.red,
                   ),
                 ),
                 SizedBox(width: 16),
@@ -356,36 +356,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           _formKey.currentState.save();
                         });
                         _onSucess();
-                        showDialog(
-                            context: context,
-                            builder: (ctx) {
-                              return AlertDialog(
-                                title: Text(
-                                  'Dados Salvos',
-                                ),
-                                content: Text('Nome:${user.name}\n'
-                                    'Email: ${user.email}\n'
-                                    'Rua: ${user.street}\n'
-                                    'Cpf: ${user.cpf}\n'
-                                    'Cep: ${_cep(user.cep)}\n'
-                                    'Numero: ${user.numberHouse}\n'
-                                    'Bairro: ${user.neighborhood}\n'
-                                    'Cidade: ${user.city}\n'
-                                    'País: ${user.country}'),
-                                actions: <Widget>[
-                                  FlatButton(
-                                      onPressed: () {
-                                        Navigator.of(ctx).pop();
-                                      },
-                                      child: Text(
-                                        'ok',
-                                      ))
-                                ],
-                              );
-                            });
+                        _dialogInfo();
                       }
                     },
                     borderSide: BorderSide(color: Colors.black),
+                    focusColor: Colors.red,
                   ),
                 ),
               ],
@@ -396,11 +371,32 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  String _cep(String number) {
-    if (number.length <= 8) {
-      number.padLeft(8, '0');
-      return '${number.substring(0, 4)}.${number.substring(5, 8)}';
-    }
+  void _dialogInfo() {
+    showDialog(
+        context: context,
+        builder: (ctx) {
+          return AlertDialog(
+            title: Text(
+              'Dados: ${user.name}',
+            ),
+            content: Text('Nome:${user.name}\n'
+                'Email: ${user.email}\n'
+                'Cpf: ${user.cpf}\n'
+                'Endereço:\n'
+                'Rua: ${user.street},Numero: ${user.numberHouse},\n'
+                'Bairro: ${user.neighborhood},Cidade: ${user.city}\n'
+                'País: $_country\n'),
+            actions: <Widget>[
+              FlatButton(
+                  onPressed: () {
+                    Navigator.of(ctx).pop();
+                  },
+                  child: Text(
+                    'ok',
+                  ))
+            ],
+          );
+        });
   }
 
   void _onSucess() {
