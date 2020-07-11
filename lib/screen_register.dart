@@ -127,7 +127,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         },
                         onFieldSubmitted: (value) {
                           print(_criptoEmail);
-                          _criptoEmail = value.toLowerCase().trim();
+                          setState(() {
+                            _criptoEmail = value.toLowerCase().trim();
+                          });
                         },
                         onSaved: (newValue) {
                           user.email = newValue;
@@ -409,11 +411,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 'País: $_country\n'),
           );
         });
-  }
-
-  _crypto(String email) {
-    var bytes = utf8.encode(email);
-    return md5.convert(bytes);
   }
 
   void _onSucess() {
