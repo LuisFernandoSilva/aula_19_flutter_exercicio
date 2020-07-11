@@ -21,6 +21,7 @@ dependencies:
   cnpj_cpf_helper: ^1.0.8
   dio:
   cnpj_cpf_formatter: ^1.0.8
+  crypto:
 
 dev_dependencies:
   flutter_test:

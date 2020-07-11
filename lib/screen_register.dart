@@ -1,9 +1,11 @@
+import 'dart:convert';
 import 'package:aula_19_flutter_exercicio/user_data.dart';
 import 'package:dio/dio.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:cnpj_cpf_helper/cnpj_cpf_helper.dart';
 import 'package:cnpj_cpf_formatter/cnpj_cpf_formatter.dart';
 import 'package:flutter/material.dart';
+import 'package:crypto/crypto.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
@@ -24,7 +26,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   final _formKey = GlobalKey<FormState>();
   final UserData user = UserData();
-
+  var _criptoEmail = 'l.gameseanimes@gmail.com.br';
   _restart() {
     _formKey.currentState.reset();
     setState(() {
@@ -78,7 +80,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   key: _formKey,
                   child: Column(
                     children: <Widget>[
-                      CircleAvatar(),
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundImage: NetworkImage(
+                            'https://www.gravatar.com/avatar/${md5.convert(utf8.encode(_criptoEmail)).toString()}?d=robohash'),
+                      ),
                       SizedBox(height: 8),
                       TextFormField(
                         controller: _nameController,
@@ -119,8 +125,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           }
                           return null;
                         },
+                        onFieldSubmitted: (value) {
+                          print(_criptoEmail);
+                          _criptoEmail = value.toLowerCase().trim();
+                        },
                         onSaved: (newValue) {
                           user.email = newValue;
+                          _criptoEmail = newValue.toLowerCase().trim();
                         },
                       ),
                       SizedBox(height: 8),
@@ -371,6 +382,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
+//caixa de dialogo quando termina o cadastro
   void _dialogInfo() {
     showDialog(
         context: context,
@@ -379,13 +391,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
             title: Text(
               'Dados: ${user.name}',
             ),
-            content: Text('Nome:${user.name}\n'
-                'Email: ${user.email}\n'
-                'Cpf: ${user.cpf}\n'
-                'Endereço:\n'
-                'Rua: ${user.street},Numero: ${user.numberHouse},\n'
-                'Bairro: ${user.neighborhood},Cidade: ${user.city}\n'
-                'País: $_country\n'),
             actions: <Widget>[
               FlatButton(
                   onPressed: () {
@@ -395,8 +400,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     'ok',
                   ))
             ],
+            content: Text('Nome:\n${user.name}\n'
+                'Email:\n ${user.email}\n'
+                'Cpf:\n ${user.cpf}\n'
+                'Endereço:\n'
+                'Rua: ${user.street},Numero: ${user.numberHouse},\n'
+                'Bairro: ${user.neighborhood},Cidade: ${user.city}\n'
+                'País: $_country\n'),
           );
         });
+  }
+
+  _crypto(String email) {
+    var bytes = utf8.encode(email);
+    return md5.convert(bytes);
   }
 
   void _onSucess() {
