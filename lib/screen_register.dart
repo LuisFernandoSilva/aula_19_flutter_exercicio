@@ -50,14 +50,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
       _cityController.text = address['localidade'];
       _stateController.text = address['uf'];
     } catch (e) {
-      Scaffold.of(context).showSnackBar(
-        SnackBar(
-          behavior: SnackBarBehavior.floating,
-          content: Text("Cep não encontrado"),
-          duration: Duration(seconds: 2),
-          backgroundColor: Colors.red,
-        ),
-      );
+      _scaffoldKey.currentState.showSnackBar(SnackBar(
+        behavior: SnackBarBehavior.floating,
+        content: Text("Cep invalido!"),
+        backgroundColor: Colors.red,
+        duration: Duration(seconds: 3),
+      ));
     }
   }
 
@@ -404,7 +402,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   void _onSucess() {
     _scaffoldKey.currentState.showSnackBar(SnackBar(
       content: Text("Usuario Criado com sucesso!"),
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Colors.red,
       duration: Duration(seconds: 3),
     ));
   }
