@@ -85,9 +85,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       TextFormField(
                         controller: _nameController,
                         decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Nome',
-                            hintStyle: TextStyle(color: Colors.blue)),
+                          border: OutlineInputBorder(),
+                          hintText: 'Nome',
+                          hintStyle: TextStyle(color: Colors.blue),
+                          focusColor: Colors.red,
+                        ),
                         validator: (value) {
                           if (value.isEmpty) {
                             return 'Nome Vazio';

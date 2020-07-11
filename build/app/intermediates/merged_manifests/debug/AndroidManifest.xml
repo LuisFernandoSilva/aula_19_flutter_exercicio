@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.aula_18_flutter_exercicio"
+    package="com.example.aula_19_flutter_exercicio"
     android:versionCode="1"
     android:versionName="1.0.0" >
 

@@ -289,7 +289,7 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_alpha com.example.aula_18_flutter_exercicio:alpha}</code></td><td>Alpha multiplier applied to the base color.</td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_alpha com.example.aula_19_flutter_exercicio:alpha}</code></td><td>Alpha multiplier applied to the base color.</td></tr>
      * </table>
      * @see #ColorStateListItem_android_color
      * @see #ColorStateListItem_android_alpha
@@ -326,7 +326,7 @@ public final class R {
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.example.aula_18_flutter_exercicio:alpha
+     * @attr name com.example.aula_19_flutter_exercicio:alpha
      */
     public static final int ColorStateListItem_alpha=2;
     /**
@@ -336,12 +336,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.example.aula_18_flutter_exercicio:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.example.aula_18_flutter_exercicio:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.example.aula_18_flutter_exercicio:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.example.aula_18_flutter_exercicio:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.example.aula_18_flutter_exercicio:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.example.aula_18_flutter_exercicio:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.example.aula_19_flutter_exercicio:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.example.aula_19_flutter_exercicio:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.example.aula_19_flutter_exercicio:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.example.aula_19_flutter_exercicio:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.example.aula_19_flutter_exercicio:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.example.aula_19_flutter_exercicio:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -362,7 +362,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.aula_18_flutter_exercicio:fontProviderAuthority
+     * @attr name com.example.aula_19_flutter_exercicio:fontProviderAuthority
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
@@ -379,7 +379,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.aula_18_flutter_exercicio:fontProviderCerts
+     * @attr name com.example.aula_19_flutter_exercicio:fontProviderCerts
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
@@ -411,7 +411,7 @@ public final class R {
      * default typeface will be used instead.</td></tr>
      * </table>
      *
-     * @attr name com.example.aula_18_flutter_exercicio:fontProviderFetchStrategy
+     * @attr name com.example.aula_19_flutter_exercicio:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
@@ -430,7 +430,7 @@ public final class R {
      * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      *
-     * @attr name com.example.aula_18_flutter_exercicio:fontProviderFetchTimeout
+     * @attr name com.example.aula_19_flutter_exercicio:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
@@ -442,7 +442,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.aula_18_flutter_exercicio:fontProviderPackage
+     * @attr name com.example.aula_19_flutter_exercicio:fontProviderPackage
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
@@ -454,7 +454,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.aula_18_flutter_exercicio:fontProviderQuery
+     * @attr name com.example.aula_19_flutter_exercicio:fontProviderQuery
      */
     public static final int FontFamily_fontProviderQuery=5;
     /**
@@ -469,11 +469,11 @@ public final class R {
      * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font com.example.aula_18_flutter_exercicio:font}</code></td><td>The reference to the font file to be used.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.example.aula_18_flutter_exercicio:fontStyle}</code></td><td>The style of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.example.aula_18_flutter_exercicio:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.example.aula_18_flutter_exercicio:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.example.aula_18_flutter_exercicio:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font com.example.aula_19_flutter_exercicio:font}</code></td><td>The reference to the font file to be used.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.example.aula_19_flutter_exercicio:fontStyle}</code></td><td>The style of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.example.aula_19_flutter_exercicio:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.example.aula_19_flutter_exercicio:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.example.aula_19_flutter_exercicio:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
      * </table>
      * @see #FontFamilyFont_android_font
      * @see #FontFamilyFont_android_fontWeight
@@ -560,7 +560,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.aula_18_flutter_exercicio:font
+     * @attr name com.example.aula_19_flutter_exercicio:font
      */
     public static final int FontFamilyFont_font=5;
     /**
@@ -580,7 +580,7 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.example.aula_18_flutter_exercicio:fontStyle
+     * @attr name com.example.aula_19_flutter_exercicio:fontStyle
      */
     public static final int FontFamilyFont_fontStyle=6;
     /**
@@ -594,7 +594,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.aula_18_flutter_exercicio:fontVariationSettings
+     * @attr name com.example.aula_19_flutter_exercicio:fontVariationSettings
      */
     public static final int FontFamilyFont_fontVariationSettings=7;
     /**
@@ -608,7 +608,7 @@ public final class R {
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.example.aula_18_flutter_exercicio:fontWeight
+     * @attr name com.example.aula_19_flutter_exercicio:fontWeight
      */
     public static final int FontFamilyFont_fontWeight=8;
     /**
@@ -619,7 +619,7 @@ public final class R {
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.example.aula_18_flutter_exercicio:ttcIndex
+     * @attr name com.example.aula_19_flutter_exercicio:ttcIndex
      */
     public static final int FontFamilyFont_ttcIndex=9;
     /**
