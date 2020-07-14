@@ -44,7 +44,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   void _buscaCep(String cep) async {
     var dio = Dio();
     try {
-      var response = await dio.get('https://viacep.com.br/ws/${cep}/json');
+      var response = await dio.get('https://viacep.com.br/ws/$cep/json');
       var address = response.data;
       _streetController.text = address['logradouro'];
       _neighborhoodController.text = address['bairro'];
@@ -125,7 +125,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           return null;
                         },
                         onFieldSubmitted: (value) {
-                          print(_criptoEmail);
                           setState(() {
                             _criptoEmail = value.toLowerCase().trim();
                           });

@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  @override
+  //@override
   void dispose() {
     _enableRotation();
   }
