@@ -1,4 +1,4 @@
-import 'package:aula_19_flutter_exercicio/user.address.dart';
+import 'package:aula_19_flutter_exercicio/user_address.dart';
 
 class UserData {
   String name;
