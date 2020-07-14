@@ -1,4 +1,4 @@
-#Sat Jul 11 15:37:24 BRT 2020
+#Tue Jul 14 19:33:44 BRT 2020
 base.0=C\:\\Users\\Luis\\Documents\\flutter_projects\\bootcamp_growdev\\aula_19_flutter_exercicio\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
