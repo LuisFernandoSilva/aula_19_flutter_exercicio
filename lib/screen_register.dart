@@ -27,19 +27,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
   final UserData user = UserData();
   var _criptoEmail = 'l.gameseanimes@gmail.com.br';
-  _restart() {
+
+  void _restart() {
     _formKey.currentState.reset();
-    setState(() {
-      _nameController.clear();
-      _emailController.clear();
-      _cpfController.clear();
-      _cepController.clear();
-      _streetController.clear();
-      _numberHouseController.clear();
-      _neighborhoodController.clear();
-      _cityController.clear();
-      _stateController.clear();
-    });
+    _nameController.clear();
+    _emailController.clear();
+    _cpfController.clear();
+    _cepController.clear();
+    _streetController.clear();
+    _numberHouseController.clear();
+    _neighborhoodController.clear();
+    _cityController.clear();
+    _stateController.clear();
   }
 
   void _buscaCep(String cep) async {
@@ -182,7 +181,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 return null;
                               },
                               onSaved: (newValue) {
-                                user.cep = newValue;
+                                user.address.cep = newValue;
                               },
                             ),
                           ),
@@ -223,7 +222,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 return null;
                               },
                               onSaved: (newValue) {
-                                user.street = newValue;
+                                user.address.street = newValue;
                               },
                             ),
                           ),
@@ -244,7 +243,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 return null;
                               },
                               onSaved: (newValue) {
-                                user.numberHouse = newValue;
+                                user.address.numberHouse = newValue;
                               },
                             ),
                           ),
@@ -271,7 +270,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 return null;
                               },
                               onSaved: (newValue) {
-                                user.neighborhood = newValue;
+                                user.address.neighborhood = newValue;
                               },
                             ),
                           ),
@@ -294,7 +293,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 return null;
                               },
                               onSaved: (newValue) {
-                                user.city = newValue;
+                                user.address.city = newValue;
                               },
                             ),
                           ),
@@ -322,7 +321,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 return null;
                               },
                               onSaved: (newValue) {
-                                user.state = newValue;
+                                user.address.state = newValue;
                               },
                             ),
                           ),
@@ -365,9 +364,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: Text('Cadastrar'),
                     onPressed: () {
                       if (_formKey.currentState.validate()) {
-                        setState(() {
-                          _formKey.currentState.save();
-                        });
+                        _formKey.currentState.save();
                         _onSucess();
                         _dialogInfo();
                       }
@@ -406,8 +403,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 'Email:\n ${user.email}\n'
                 'Cpf:\n ${user.cpf}\n'
                 'Endereço:\n'
-                'Rua: ${user.street},Numero: ${user.numberHouse},\n'
-                'Bairro: ${user.neighborhood},Cidade: ${user.city}\n'
+                'Rua: ${user.address.street},Numero: ${user.address.numberHouse},\n'
+                'Bairro: ${user.address.neighborhood},Cidade: ${user.address.city}\n'
                 'País: $_country\n'),
           );
         });

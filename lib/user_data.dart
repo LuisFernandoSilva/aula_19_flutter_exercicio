@@ -1,12 +1,8 @@
+import 'package:aula_19_flutter_exercicio/user.address.dart';
+
 class UserData {
   String name;
   String email;
   String cpf;
-  String cep;
-  String street;
-  String numberHouse;
-  String neighborhood;
-  String city;
-  String state;
-  String country = 'brasil';
+  Address address = Address();
 }
